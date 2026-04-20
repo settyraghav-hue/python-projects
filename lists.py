@@ -14,14 +14,14 @@ print(f"The list of fruits are as follows:")
 
 # For Loop syntax
 for i in range(no_fruits):
-	print(f"{i+1}. Fruit is {fruits[i-1]}")
+	print(f"{i+1}. Fruit is {fruits[i]}")
 
 # Now we are moving to functions
-def pick_fruit(fruitnum):
+def pick_fruit():
 	fruitnum = input("Enter a fruit number you like : ")
-	return fruitnum 
+	return fruitnum
 
 fruitnum = 0
-choice = pick_fruit(fruitnum)
+choice = pick_fruit()
 print(f"Choice entered is {choice}")
-print(f"You like the {fruits[int(choice)]} fruit")
+print(f"You like the {fruits[int(choice)-1]} fruit")
