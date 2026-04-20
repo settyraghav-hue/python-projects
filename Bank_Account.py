@@ -17,7 +17,7 @@ class BankAccount:
     print(f"Current Balance is : ${self.balance}")
 
   def display_account_info(self):
-    print(f"{self.owner}'s account balance : ${self.balance}"
+    print(f"{self.owner}'s account balance : ${self.balance}")
 
 account = BankAccount("John",1000)
 account.deposit(500)
