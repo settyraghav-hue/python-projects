@@ -19,8 +19,12 @@ class BankAccount:
   def display_account_info(self):
     print(f"{self.owner}'s account balance : ${self.balance}")
 
-account = BankAccount("John",1000)
-account.deposit(500)
-account.withdraw(200)
+name = input("Enter your name : ")
+initial_deposit = float(input("Enter initial deposit amount : "))
+account = BankAccount(name, initial_deposit)
+deposit_amount = float(input("Enter deposit amount : "))
+account.deposit(deposit_amount)
+withdraw_amount = float(input("Enter withdrawal amount : "))
+account.withdraw(withdraw_amount)
 account.check_balance()
 account.display_account_info()
