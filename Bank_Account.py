@@ -6,18 +6,18 @@ class BankAccount:
     self.balance = balance
 
   def deposit(self, deposit):
-    self.balance = self.balance + self.deposit
-    print(f"Deposited ${self.deposit} to {self.holder}'s account")
+    self.balance = self.balance + deposit
+    print(f"Deposited ${deposit} to {self.owner}'s account")
 
   def withdraw(self, withdraw):
-    self.balance = self.balance - self.withdraw
-    print(f"Withdrew ${self.withdraw} from {self.holder}'s account")
+    self.balance = self.balance - withdraw
+    print(f"Withdrew ${withdraw} from {self.owner}'s account")
 
-  def check_balance(self)
+  def check_balance(self):
     print(f"Current Balance is : ${self.balance}")
 
-  def display_account_info(self)
-    print(f"{self.holder}'s account balance : ${self.balance}"
+  def display_account_info(self):
+    print(f"{self.owner}'s account balance : ${self.balance}"
 
 account = BankAccount("John",1000)
 account.deposit(500)
