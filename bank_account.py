@@ -27,17 +27,21 @@ initial_deposit = float(input("Enter initial deposit amount : "))
 account = BankAccount(name, initial_deposit)
 
 while True:
-  action = input("Would you like to deposit, withdraw, or exit? ").strip().lower()
+  action = input("Would you like to Deposit, Withdraw, or Exit? ").strip().upper()
 
-  if action == "exit":
+  if action == "E":
     print("Exiting account session.")
     break
 
-  if action not in ["deposit", "withdraw"]:
-    print("Invalid choice. Please type deposit, withdraw, or exit.")
+  if action not in ["D", "W"]:
+    print("Invalid choice. Please type D for Deposit, W for Withdraw, or E for Exit.")
     continue
 
-  amount_text = input(f"Enter amount to {action} : ").strip()
+  if action == "D":
+    action_text = "deposit"
+  else:    action_text = "withdraw" 
+
+  amount_text = input(f"Enter amount to {action_text } : ").strip()
   try:
     amount = float(amount_text)
   except ValueError:
@@ -48,7 +52,7 @@ while True:
     print("Amount must be greater than 0.")
     continue
 
-  if action == "deposit":
+  if action == "D":
     account.deposit(amount)
   else:
     account.withdraw(amount)
