@@ -1,6 +1,6 @@
 # Python program to create a BankAccount class and add objects and methods
 
-Class BankAccount:
+class BankAccount:
   def __init__ (self, owner, balance):
     self.owner = owner
     self.balance = balance
